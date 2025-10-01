@@ -49,5 +49,44 @@ div.rm * {
 }
 
 .blue {
-  color:blue;font-style:italic;
+  color:blue;
+  font-style:italic;
+}
+
+.green {
+  color:green;
+}
+
+.callout {
+  border: 1px solid #ccc;
+  border-left: 5px solid #007bff; /* Accent border on the left */
+  padding: 0 15px;
+  margin: 0 20px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.callout p {
+  margin: 2px;
+}
+
+.callout-header {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #007bff; /* Match accent color */
+}
+
+.callout-header::after {
+  content: ":\A";
+  white-space: pre-wrap;
+}
+
+.callout-content {
+  line-height: 1.5;
+  color: #333;
+}
+
+.callout-content p {
+  margin: 5px;
 }
