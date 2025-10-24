@@ -21,26 +21,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: install wget, curl, git
-        uses: awalsh128/cache-apt-pkgs-action@latest
-        with:
-          packages: fonts-ipafont wget curl git
-          version: 1.02
-      - name: install openjdk 8
-        uses: awalsh128/cache-apt-pkgs-action@latest
-        with:
-          packages: openjdk-8-jre
-          version: 1.02
-      - name: install texlive latex base
-        uses: awalsh128/cache-apt-pkgs-action@latest
-        with:
-          packages: texlive-latex-base
-          version: 1.02
-
-      - name: install texlive xetex
+      - name: install dependencies
         run: |
           sudo apt update
-          sudo apt install -y texlive-xetex
+          sudo apt install -y fonts-ipafont wget curl git openjdk-8-jre texlive-latex-base texlive-xetex
 
       - uses: actions/checkout@v4
         with:
@@ -56,21 +40,18 @@ jobs:
         run: |
           make -C wg21-mpark update
 
-      - name: Build pdf
-        run: |
-          make -C P1317
+      # - name: Build pdf
+      #   run: |
+      #     make -C P1317
 
       - name: Build html
         run: |
-          make -C P3557 html
-          make -C P3718 html
+          make -C P3826 html
 
       - name: Gather artifacts
         run: |
           mkdir -p generated
-          cp P1317/generated/*.pdf generated
-          cp P3557/generated/*.html generated
-          cp P3718/generated/*.html generated
+          cp P3826/generated/*.html generated
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
