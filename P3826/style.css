@@ -49,12 +49,12 @@ div.rm * {
 }
 
 .blue {
-  color:blue;
-  font-style:italic;
+  color:blue !important;
+  font-style:italic !important;
 }
 
 .green {
-  color:green;
+  color:green !important;
 }
 
 .callout {
