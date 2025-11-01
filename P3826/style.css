@@ -90,3 +90,7 @@ div.rm * {
 .callout-content p {
   margin: 5px;
 }
+
+.centered {
+  text-align: center;
+}
