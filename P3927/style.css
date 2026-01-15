@@ -1,0 +1,96 @@
+
+p:has(> span.npnum) {
+	padding-left: 2.5em;
+}
+
+span.npnum {
+  position: absolute;
+  margin-left: -1.5em;
+}
+
+/* Change the color of code comments from green to grey */
+/* so as not to be confused with (green) inserted text. */
+code span.co {
+  color: #666666;
+}
+
+/* Do the same for operators */
+code span.op {
+  color: #666666;
+}
+
+th div {
+  text-align: left !important;
+}
+
+.green-box {
+  border: 1px solid green; /* Sets a 1px solid green border */
+  padding-left: 1px;
+  padding-right: 2px;
+  background-color: #e0ffe0; /* adds a light green background */
+  display: inline-block;   /* Makes the div only as wide as its content */
+}
+
+table {
+  border: none;
+  /* border-collapse: collapse; */
+}
+
+tr {
+  border-bottom: 1px solid;
+}
+
+blockquote {
+  background-color: #ffffff;
+}
+
+div.rm * {
+  text-decoration: line-through;
+}
+
+.blue {
+  color:blue !important;
+  font-style:italic !important;
+}
+
+.green {
+  color:green !important;
+}
+
+.callout {
+  border: 1px solid #ccc;
+  border-left: 5px solid #007bff; /* Accent border on the left */
+  padding: 0 15px;
+  margin: 0 20px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.callout p {
+  margin: 2px;
+}
+
+.callout-header {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #007bff; /* Match accent color */
+}
+
+.callout-header::after {
+  content: ":\A";
+  white-space: pre-wrap;
+}
+
+.callout-content {
+  line-height: 1.5;
+  color: #333;
+}
+
+.callout-content p {
+  margin: 5px;
+}
+
+.centered {
+  text-align: center;
+}
